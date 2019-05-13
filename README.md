@@ -15,4 +15,4 @@ Without Clusters:
 
 
 With Clusters:
-![alt text](clusters.pdf)
+![alt text](cluster.pdf)
