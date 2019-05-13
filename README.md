@@ -11,8 +11,8 @@ Tools used:
 	- Gephi
 
 Without Clusters:
-![Screenshot](network.pdf)
+![alt text](network.pdf)
 
 
 With Clusters:
-![Screenshot](clusters.pdf)
+![alt text](clusters.pdf)
