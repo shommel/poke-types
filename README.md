@@ -1,4 +1,4 @@
-Inspired by the Detective Pikachu movie, I am doing a discovery into Pokemon and their typings for a 1-day project! I will try to figure out which type has the most/least Pokemon, the connections between the typings, etc.
+Inspired by the Detective Pikachu movie, I am doing a discovery into Pokemon and their typings! I will try to figure out which type has the most/least Pokemon, the connections between the typings, etc.
 
 Guide for the graph:
 
