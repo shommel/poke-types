@@ -9,3 +9,10 @@ Guide for the graph:
 Tools used:
 	- Python
 	- Gephi
+
+Without Clusters:
+![Screenshot](network.pdf)
+
+
+With Clusters:
+![Screenshot](clusters.pdf)
