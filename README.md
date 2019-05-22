@@ -11,8 +11,8 @@ Tools used:
 	- Gephi
 
 Without Clusters:
-![alt text](https://github.com/shommel/poke-types/blob/master/network.pdf)
+![alt text](https://github.com/shommel/poke-types/blob/master/network.png)
 
 
 With Clusters:
-![alt text](https://github.com/shommel/poke-types/blob/master/cluster.pdf)
+![alt text](https://github.com/shommel/poke-types/blob/master/cluster.png)
