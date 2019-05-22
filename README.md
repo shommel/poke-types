@@ -9,3 +9,10 @@ Guide for the graph:
 Tools used:
 	- Python
 	- Gephi
+
+Without Clusters:
+![alt text](https://github.com/shommel/poke-types/blob/master/network.pdf)
+
+
+With Clusters:
+![alt text](https://github.com/shommel/poke-types/blob/master/cluster.pdf)
