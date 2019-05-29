@@ -30,31 +30,32 @@ s = {} #will be used to determine the size of nodes
 for t in types:
     s.update({t:0})
 
-G = nx.Graph()
 
-
+gens = pk.load(open("gens.p", "rb"))
+for gen in gens:
+    for t in types:
+        s[t] = 0
+    G = nx.Graph()
+    df = pd.DataFrame(np.zeros([18,18], dtype=int))
+    df.columns = types.keys()
+    df.index = types.keys()
     
-dex = pk.load(open("dex.p", "rb"))
-
-df = pd.DataFrame(np.zeros([18,18], dtype=int))
-df.columns = types.keys()
-df.index = types.keys()
-
-for entry in dex.values():
-    for t in entry:
-        s[t] += 1
-    if(len(entry) > 1):
-        df[entry[0]][entry[1]]+=1
-        df[entry[1]][entry[0]]+=1
-
-for t in types.items():
+    for entry in gens[gen].values():
+        for t in entry:
+            s[t] += 1
+        if(len(entry) > 1):
+            df[entry[0]][entry[1]]+=1
+            df[entry[1]][entry[0]]+=1
+    
+    for t in types.items():
         G.add_node("{} ({})".format(t[0], s[t[0]]), color = t[1], size = s[t[0]])
-        
-for i,t1 in enumerate(types):
-    for j,t2 in enumerate(types):
-        if(j > i):
-            G.add_edge("{} ({})".format(t[1], s[t[1]]),"{} ({})".format(t[2], s[t[2]]), weight=int(df[t1][t2]))
-
-
-G.remove_edges_from(G.selfloop_edges())
-nx.write_graphml(G, "types.graphml")
+        print(s[t[0]])
+            
+    for i,t1 in enumerate(types):
+        for j,t2 in enumerate(types):
+            if(j > i):
+                G.add_edge("{} ({})".format(t1, s[t1]), "{} ({})".format(t2, s[t2]), \
+                           weight=int(df[t1][t2]))
+                
+    G.remove_edges_from(G.selfloop_edges())
+#    nx.write_graphml(G, "gen{}.graphml".format(str(gen)))
